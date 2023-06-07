@@ -1,4 +1,4 @@
-.ShowSummary {
+/* .ShowSummary {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -76,4 +76,63 @@ button:hover {
 body {
   height: 100vh;
   background-color: #f8f9fa;
+} */
+
+.ShowList {
+  background-color: rgba(117, 29, 29, 0.918);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ShowList .title {
+  text-align: center;
+  width: 100%;
+  background-color: #9e2323;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.ShowList .show-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 50px;
+  margin-top: 0px;
+}
+
+.ShowList .show-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.ShowList .show-card:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 600px) {
+  .ShowList .show-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .ShowList .show-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Larger Screens */
+@media only screen and (min-width: 1025px) {
+  .ShowList .show-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
